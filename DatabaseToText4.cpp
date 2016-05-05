@@ -443,7 +443,7 @@ int main( int argc, char** argv ) {
   }
 
    //Convex hull difference
-   //comp << calculateConvex() << '\n';
+   comp << calculateConvex() << '\n';
 
    //starting on TIP of leaf
    for(int i =0; i < res.size(); i++)
