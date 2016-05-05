@@ -34,4 +34,22 @@ To test the algorithm, try a few leaves:
     ./inputimage.sh testleaf.jpg
     ./inputimage.sh testleaf2.jpg
 
-Once 
+Once the algorithm finishes the comparison, your command line will show a series of percentage matches for each leaf:
+
+     x percent similarity, leaf cercidiphyllum_japonicum.database
+     y percent similarity, leaf castanea_dentata.database
+     z percent similarity, leaf betula_alleghaniensis.database
+     a percent similarity, leaf acer_ginnala.database
+
+**Note the percentage has specific guidelines to consider it similar or unsimilar.** That is, 40% doesn't mean it is sort of similar, it actually means not *even* close :) See guidelines.md for more info.
+
+Then, it will ask you if it correctly matched the leaf. 
+
+     Was the leaf correctly identified? Y for yes, or N for no.
+
+If you are satisfied with the result, press Y. To train a new leaf into the database, you can use this to your advantage,  and answer no. This will direct you to a message prompting you to give it the right name:
+
+     Then what database should it be added to, or what new database should be created?
+     Also, give me the correct name of the leaf
+
+
