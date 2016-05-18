@@ -35,8 +35,6 @@ This way, you can run the code as-is, but it will detect letters instead of leav
 
 (If you run into any problem here whatsoever, it may mean you haven't satisfied the prerequisites!!)
 
-**Note:** Leaves may not detect in the TextRecognition version of the algorithm, and text may not be detected in the original version of the algorithm. Be sure to temporarily disactivate those folders, either by stripping its `.database` suffix (since the algorithm only reads databases with that suffix) or putting it into another folder. 
-
 **Note about files:** The AbsoluteDistance handles the comparison of distances, 
 DatabaseToText4 for segmenting the leaf and extracting key features (Leaf distance, and Convexity factor), and
 InputImage for dealing with the comparison of the query leaf and the database, automating the process by calling the last two functions.
