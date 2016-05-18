@@ -23,14 +23,29 @@ Then, compile the files that make up the algorithm:
     javac graphic.java 
     chmod +x inputimage.sh
 
-(If you run into any problem here whatsoever, it could mean you haven't satisfied the prerequisites!!)
+If you would like to run the text recognition version of the algorithm, simply take the contents of the TextRecognitionDatabaseToText.cpp and copy it into DatabaseToText4.cpp before running the other commands:
+    
+    cp TextRecognitionDatabaseToText.cpp  DatabaseToText4.cpp
+    g++ AbsoluteDistance.cpp -o AbsoluteDistance
+    g++ DatabaseToText4.cpp -o DatabaseToText4 `pkg-config --cflags --libs opencv`
+    javac graphic.java 
+    chmod +x inputimage.sh
+
+This way, you can run the code as-is, but it will detect letters instead of leaves.
+
+(If you run into any problem here whatsoever, it may mean you haven't satisfied the prerequisites!!)
+
+**Note:** Leaves may not detect in the TextRecognition version of the algorithm, and text may not be detected in the original version of the algorithm. Be sure to temporarily disactivate those folders, either by stripping its `.database` suffix (since the algorithm only reads databases with that suffix) or putting it into another folder. 
 
 **Note about files:** The AbsoluteDistance handles the comparison of distances, 
 DatabaseToText4 for segmenting the leaf and extracting key features (Leaf distance, and Convexity factor), and
 InputImage for dealing with the comparison of the query leaf and the database, automating the process by calling the last two functions.
-Don't worry about the PearsonCorrel.cpp, it is the old Pearson Correlation Metric method (as you saw in the Research, this turned out to not work well). I've provided the file for reference, you can view it, look at it, so forth...
 
-To test the algorithm, try a few leaves:
+The databases come pre-trained, but you can make a new database by inputting a leaf/text and pressing "N" when it asks if the leaf/text was detected correctly (More info in the bottom section). 
+
+Don't worry about PearsonCorrel.cpp, it is the old Pearson Correlation Metric method (as you saw in the Research, this turned out to not work well in some leaves). I've provided the file for reference, you can view it, look at it, so forth...
+
+To test the algorithm, try a few leaves (or text):
 
     ./inputimage.sh testleaf.jpg
     ./inputimage.sh testleaf2.jpg
