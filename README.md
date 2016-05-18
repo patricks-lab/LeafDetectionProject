@@ -25,7 +25,7 @@ Then, compile the files that make up the algorithm:
 
 If you would like to run the text recognition version of the algorithm, simply take the contents of the TextRecognitionDatabaseToText.cpp and copy it into DatabaseToText4.cpp before running the other commands:
     
-    cp TextRecognitionDatabaseToText.cpp  DatabaseToText4.cpp
+    mv TextRecognitionDatabaseToText.cpp  DatabaseToText4.cpp
     g++ AbsoluteDistance.cpp -o AbsoluteDistance
     g++ DatabaseToText4.cpp -o DatabaseToText4 `pkg-config --cflags --libs opencv`
     javac graphic.java 
