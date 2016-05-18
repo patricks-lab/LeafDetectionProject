@@ -28,6 +28,7 @@ Then, compile the files that make up the algorithm:
 **Note about files:** The AbsoluteDistance handles the comparison of distances, 
 DatabaseToText4 for segmenting the leaf and extracting key features (Leaf distance, and Convexity factor), and
 InputImage for dealing with the comparison of the query leaf and the database, automating the process by calling the last two functions.
+Don't worry about the PearsonCorrel.cpp, it is the old Pearson Correlation Metric method (as you saw in the Research, this turned out to not work well). I've provided the file for reference, you can view it, look at it, so forth...
 
 To test the algorithm, try a few leaves:
 
