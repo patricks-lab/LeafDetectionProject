@@ -23,13 +23,12 @@ Then, compile the files that make up the algorithm:
     javac graphic.java 
     chmod +x inputimage.sh
 
-If you would like to run the text recognition version of the algorithm, simply take the contents of the TextRecognitionDatabaseToText.cpp and copy it into DatabaseToText4.cpp before running the other commands:
+If you would like to run the text recognition version of the algorithm, simply run TextRecognitionDatabaseToText.cpp instead of DatabaseToText4.cpp:
     
-    mv TextRecognitionDatabaseToText.cpp  DatabaseToText4.cpp
     g++ AbsoluteDistance.cpp -o AbsoluteDistance
-    g++ DatabaseToText4.cpp -o DatabaseToText4 `pkg-config --cflags --libs opencv`
+    g++ TextRecognitionDatabaseToText.cpp -o TextRecognitionDatabaseToText `pkg-config --cflags --libs opencv`
     javac graphic.java 
-    chmod +x inputimage.sh
+    chmod +x TextRecogInputimage.sh
 
 This way, you can run the code as-is, but it will detect letters instead of leaves.
 
@@ -47,6 +46,7 @@ To test the algorithm, try a few leaves (or text):
 
     ./inputimage.sh testleaf.jpg
     ./inputimage.sh testleaf2.jpg
+    ./TextRecogInputimage.sh text.jpg
 
 Once the algorithm finishes the comparison, your command line will show a series of percentage matches for each leaf:
 
